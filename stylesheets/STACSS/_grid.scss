@@ -1,0 +1,118 @@
+// Grids
+// -----
+.row {
+  // Will rows be used on <ul> elements?
+  @include listUnstyled;
+
+  // Only clearfix for rows tablet and above
+  //@include respond($breakpoint, min) {
+  //  @include clearfix;
+  //}
+}
+
+// Responsive padding with Example
+// Decide on a benchmark for padding at a specific width (example: 100px padding at 1000px width
+// Assign this measurement in percentage to the row as a negative margin.
+// Note: There can be more than one padding class (padding-100, etc)
+//.row.padded {
+  //margin-right: -10%;
+  //margin-left: -10%;
+//}
+
+%column-prototype {
+  float: none;
+  width: 100%;
+  box-sizing: border-box;
+  // Float left above a certain break point
+  //@include respond($breakpoint, min) {
+  //  float: left;
+  //}
+  // For each row padding class, there should be a corresponding scoped selector in the column prototype
+  // The value of this padding is the percentage used to get the same padding as the row element
+  // Example:
+  // If the row has row has 10% margin (100px padding at 1000px) then the max-width of its child element is 1200px
+  // To get the same padding from a child, you divide 100px/1200px to get 8.333%. This is finely adjusted in browser
+  // to get the perfect value
+  //.padded & {
+    //padding-right: 8.334%;
+    //padding-left: 8.334%;
+  //}
+}
+
+
+
+// Percentage Based Grids
+// --------------------------------------------------------
+// Wrap these in media queries to for responsive behavior
+.col-full {
+  width: 100%;
+}
+
+// Only used for navigation grid
+.col-sixth {
+  @extend %column-prototype;
+  width: 16.667%;
+}
+
+.col-quarter {
+  width: 25%;
+}
+
+.col-third {
+  @extend %column-prototype;
+  width: 33.333%;
+}
+
+.col-two-fifths {
+  @extend %column-prototype;
+  width: 40%;
+}
+
+.col-half {
+  @extend %column-prototype;
+  width: 50%;
+}
+
+.col-three-fifths {
+  @extend %column-prototype;
+  width: 60%;
+}
+
+.col-two-thirds {
+  @extend %column-prototype;
+  width: 66.667%;
+}
+
+.col-three-fourths {
+  @extend %column-prototype;
+  width: 75%;
+}
+
+// For responsive fallback
+//.col-quarter, .col-three-quarters {
+//  @extend %column-prototype;
+//  width: 50%;
+//}
+
+
+// Offsets
+// --------------------------
+.offset-quarter {
+  margin-left: 25%;
+}
+
+.offset-third {
+  margin-left: 33.333%;
+}
+
+.offset-half {
+  margin-left: 50%;
+}
+
+.offset-two-thirds {
+  margin-left: 66.667%;
+}
+
+.col-three-quarters {
+  width: 75%;
+}

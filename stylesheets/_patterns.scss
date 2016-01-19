@@ -1,0 +1,62 @@
+// Patterns
+// --------
+
+// Basic utility patterns
+// --------------------------------------------------------
+// Visually Hidden, for skip links and screen-reader only elements
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+// Image replacement, for icons and things with hidden accessibility text
+.ir {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+
+  br {
+    display: none;
+  }
+}
+
+%thin-glyphs {
+  // Ignore spelling and prefixes for pre-standards parameter
+  // scss-lint:disable PropertySpelling
+  font-smooth: always;
+  // scss-lint:disable VendorPrefix
+  -webkit-font-smoothing: antialiased;
+  // scss-lint:disable VendorPrefix
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Links
+// --------------------------
+%bare-focus {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Prevents user from accidentally selecting text
+// on click, helpful for labels
+%no-select {
+  // Ignore vendor prefixing as this is a pre-standards parameter
+  // scss-lint:disable VendorPrefix
+  -webkit-user-select: none;
+  // scss-lint:disable VendorPrefix
+  -moz-user-select: none;
+  // scss-lint:disable VendorPrefix
+  -ms-user-select: none;
+}

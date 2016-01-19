@@ -1,0 +1,24 @@
+// Component Structure
+// -------------------
+
+// Structure-only classes, with parameters for margins, padding, position, display, etc.
+
+// They may contain:
+// Nested classes/elements that have structural parameters only
+
+// NB: Containers that are modular regardless of context should use EM units
+// Structure should not be dependent on typography styles but font-size CAN be used as a structural style if necessary
+
+// Contents
+// --------------------------
+// - Imports
+// - Prototypes
+// - Utilities
+// - Layout
+// - Type
+// - Images
+// - Article Lists
+// - Navigation Lists
+// - Buttons/Links
+// - Tables
+// - Forms
