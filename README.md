@@ -7,20 +7,34 @@ If you want to build an Hypertext type web experiment and need a set of mostly d
 
 Let's say that you have an ambitious design that you know is going to need that type of componentized framework, but with primarily custom styles and structure. SCSS might help you manage and maintain that process. It's also great for building small sites where you want the backup of helpful mixins and patterns for things like cross-browser unstyled buttons and media-queries, but don't want to use or override a pre-designed framework.
 
+### Such Features ###
 The key tenant of STACSS is its architecture, which informs its name. Abstracted style presets (and in some cases, entire classes) are grouped into three files:
 - Structure
 - Typography
 - Appearance
 
-In that order. The goal of this organization is to separate out style patterns that are unrelated from a design perspective, so that they can be combined in a blocky and maintainable way as a style (or in somecases) style framework is built.
+In that order. The goal of this organization is twofold:    
+1. To separate utility classes that are unrelated from a design perspective.    
+_Example:_ `.container` goes in structure, and `.heading-primary` goes in typography).    
+2. To provide a clear abstraction layer for shared style patterns that sits above components.    
+_Example:_ `.avatar-list` might use a grid layout that is definted in *Structure*, heading classes from *Typography*, and a shared background-color/border-style mixin that is in *Appearance*. This makes it a very specific component, but with a clear pathway back to all of its shared properties.
 
-Standard example to be provided soon, and more details will be built out in the project wiki.
+More thorough examples and documentation will be added to the project wiki soon.
+
+### Many Buildings
+STACSS encourages the use of making components (and component partials) that are as specific as is needed. Go ahead and make a partial for that one list module: It probably has its own view in the app anyhow. If its not clear what components will be reused, don't stress about it: The location of abstracted style-patterns is clear, and just granular enough that you can build away on singletons and then pull shared styles into a relevent partial when you see a repeating pattern.
+
+### Stop Worrying about Order and Keep Everything in Order
+Along with the greater structural goals above, STACSS has some suggestions about specificity and nested component classes that will help you avoid source-order conflics and, in some cases, stop worrying about order altogether. There's also this nifty z-index partial where you can keep track of the z-stacking of all components in one place: we think you'll like the sanity imparted by this idea.
+
+### Forget Everything you Just Read
+If you want. STACSS is pretty modular. Delete what you don't want and say goodbye forever. Urr, I mean fork it and tell us what you changed for the betterment of us all!
 
 ## Set up that stack
 This repo has two top-level scss manifests, one "rte" that is helpful for websites with RTE/MCE in-browser editor components, and one "styles" that pulls in everything.
 There is no special setup requirecd beyond pulling the stylesheets folder into your product and compiling it with your favorite build utility (or not, intrepid asset-pipeline-on-the-server type user!).
 
-## Lint out of the box
+## Lint out of the Box
 To lint the styles included in the repo, install [SCSS-Lint](https://github.com/brigade/scss-lint) with a little `gem install scss-lint` and run this in the project directory: 
 
 `scss-lint stylesheets/ -c .scss-lint.yml`
