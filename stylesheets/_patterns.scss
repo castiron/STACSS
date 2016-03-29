@@ -30,33 +30,3 @@
     display: none;
   }
 }
-
-%thin-glyphs {
-  // Ignore spelling and prefixes for pre-standards parameter
-  // scss-lint:disable PropertySpelling
-  font-smooth: always;
-  // scss-lint:disable VendorPrefix
-  -webkit-font-smoothing: antialiased;
-  // scss-lint:disable VendorPrefix
-  -moz-osx-font-smoothing: grayscale;
-}
-
-// Links
-// --------------------------
-%bare-focus {
-  &:focus {
-    outline: none;
-  }
-}
-
-// Prevents user from accidentally selecting text
-// on click, helpful for labels
-%no-select {
-  // Ignore vendor prefixing as this is a pre-standards parameter
-  // scss-lint:disable VendorPrefix
-  -webkit-user-select: none;
-  // scss-lint:disable VendorPrefix
-  -moz-user-select: none;
-  // scss-lint:disable VendorPrefix
-  -ms-user-select: none;
-}

@@ -79,6 +79,16 @@
   }
 }
 
+@mixin thinGlyphs {
+  // Ignore spelling and prefixes for pre-standards parameter
+  // scss-lint:disable PropertySpelling
+  font-smooth: always;
+  // scss-lint:disable VendorPrefix
+  -webkit-font-smoothing: antialiased;
+  // scss-lint:disable VendorPrefix
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Full bleed
 // $direction accepts 'up', 'down' or 'none';
 // NB using 'up' or 'down' causes the shadow to
@@ -150,4 +160,16 @@
   background: transparent;
   border: 0;
   outline: none;
+}
+
+// Prevents user from accidentally selecting text
+// on click, helpful for labels
+@mixin noSelect {
+  // Ignore vendor prefixing as this is a pre-standards parameter
+  // scss-lint:disable VendorPrefix
+  -webkit-user-select: none;
+  // scss-lint:disable VendorPrefix
+  -moz-user-select: none;
+  // scss-lint:disable VendorPrefix
+  -ms-user-select: none;
 }
