@@ -2,8 +2,8 @@ scss_files: "**/*.scss"
 plugin_directories: ['.scss-linters']
 # Use exclude to ignore files from external libraries and unused files
 exclude: [
-  'stylesheets/Lib/*.scss',
-  'stylesheets/Mixins/_mixins-vendor.scss'
+  'stylesheets/lib/*.scss',
+  'stylesheets/mixins/_mixins-vendor.scss'
 ]
 
 # List of gem names to load custom linters from (make sure they are already
