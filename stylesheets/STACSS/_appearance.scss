@@ -1,7 +1,7 @@
 // Component Appearance
 // --------------------
 
-// Appearance classes contain primarily texture parameters: background-color, transparency, borders, etc. as well
+// Appearance mixins contain primarily texture parameters: background-color, transparency, borders, etc. as well
 // as some minor, internal structural properties where abstraction isn't required (to prevent over-abstracting)
 
 // They may contain:
@@ -23,3 +23,33 @@
 // - Buttons/Links
 // - Tables
 // - Forms
+
+// Basic utility patterns
+// --------------------------------------------------------
+// Visually Hidden, for skip links and screen-reader only elements
+@mixin screenReaderText {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+// Image replacement, for icons and things with hidden accessibility text
+@mixin imageReplacement {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+
+  br {
+    display: none;
+  }
+}

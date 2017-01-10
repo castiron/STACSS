@@ -1,7 +1,7 @@
 // Component Typography and Prototypes
 // -----------------------------------
 
-// Template typography classes and mixins/prototypes that can be extended into content classes.
+// Template typography mixins/prototypes and utility classes that can be extended into content classes.
 // Typographic classes can contain some structural (not textural) design where it does not require abstraction,
 // and textural classes dealing with typography (color, text-decoration, pseudo elements that modify text, etc).
 
@@ -10,15 +10,3 @@
 // with <span> classes inside.
 
 // These should not contain classes/prototypes to handle icon fonts. Those should be handles in a separate icons partial.
-
-// Contents
-// --------------------------
-// - Utilities
-// - Prototypes
-// - Copy
-// - Headings
-// - Subheadings
-// - Signage
-// - Labels
-// - Lists
-// - Forms
