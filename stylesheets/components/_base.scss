@@ -5,7 +5,7 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 // Sets text selection background color
@@ -14,6 +14,8 @@
 // Global
 // --------------------------------------------------------
 html {
+  // Applies a natural box layout model to all the things
+  box-sizing: border-box;
   // Set the base font size here, which will correspond to 1em inside <body>
   font-size: 100%;
   // Do you want to force grayscale antialiasing globally in webkit & gecko?
@@ -82,7 +84,7 @@ p {
   }
 }
 
-ul, 
+ul,
 ol {
   // Base list styles
 }
