@@ -65,3 +65,17 @@
   // scss-lint:disable VendorPrefix
   -ms-user-select: none;
 }
+
+// Icons
+// --------------------------------------------------------
+@mixin protoIcon($size: 1em) {
+  display: inline;
+  width: $size;
+  height: $size;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+// .icon {
+//   @include protoIcon;
+// }
