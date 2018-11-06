@@ -6,10 +6,22 @@
 */
 
 @import 'lib/normalize';
+
+// Variables
+//
+// Weight: 1
+//
+// Styleguide Variables
 @import 'variables';
 @import 'fonts';
 @import 'mixins/index';
+
+// STACSS
+//
+// Weight: 2
+//
+// Styleguide STACSS
 @import 'STACSS/index';
-// If an icon font is used
+// If icon font is used
 // @import "icon-font";
 @import 'components/index';

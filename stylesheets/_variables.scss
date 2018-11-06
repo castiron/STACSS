@@ -3,12 +3,50 @@
 
 // Colors
 // --------------------------------------------------------
-// Neutrals
+
+// Neutral Colors
+//
+// Weight: 1
+//
+// Add optional description here
+//
+// $white - #ffffff;
+// $black - #000000;
+//
+// Styleguide Variables.neutralColors
+
 $white: #ffffff;
 $black: #000000;
 
-// Accent Colors
-$accentPrimary: #50c9d2;
+// Site-Wide Base Colors
+//
+// Weight: 2
+//
+// Add optional description here
+//
+// $basePrimary - #3198B6;
+// $baseSecondary - #FFCE2D;
+//
+// Styleguide Variables.baseColors
+
+$basePrimary: #3198B6;
+$baseSecondary: #FFCE2D;
+
+// Responsive breakpoints
+// --------------------------------------------------------
+// $break130: ;
+// $break120: ;
+// $break110: ;
+// $break100: ;
+// $break90: ;
+// $break80: ;
+// $break70: ;
+// $break60: ;
+// $break50: ;
+// $break40: ;
+// $break30: ;
+// $break20: ;
+// $break10: ;
 
 // Typographic hierarchy
 // --------------------------------------------------------
@@ -42,19 +80,3 @@ $timing: ease;
 $regular: 400;
 // $medium: 600;
 // $bold: 700;
-
-// Responsive breakpoints
-// --------------------------------------------------------
-// $break130: ;
-// $break120: ;
-// $break110: ;
-// $break100: ;
-// $break90: ;
-// $break80: ;
-// $break70: ;
-// $break60: ;
-// $break50: ;
-// $break40: ;
-// $break30: ;
-// $break20: ;
-// $break10: ;
