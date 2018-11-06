@@ -1,35 +1,6 @@
 // Base mixins
 // ---------
 
-// Clearfix
-// $mode accepts 'light' or 'heavy'
-// 'light' is sufficient for clearing floats, while 'heavy' is required to
-// prevent margin collapsing
-// --------------------------
-@mixin clearfix($mode: light) {
-  @if $mode == heavy {
-    &::before,
-    &::after {
-      display: table;
-      content: ' ';
-    }
-
-    &::after {
-      clear: both;
-    }
-  } @else {
-    &::after {
-      display: block;
-      clear: both;
-      content: ' ';
-    }
-  }
-}
-
-.clearfix {
-  @include clearfix;
-}
-
 // Kill ye FOUT
 // Depends on Typekit's webfontloader adding the .wf-active class...
 // --------------------------------------------------------
