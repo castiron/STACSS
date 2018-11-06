@@ -1,14 +1,20 @@
-// Fonts
-// -----
-
-// Do your @font-face embedding here, in the privacy of your own partial
-
 // Mixins
-// --------------------------
-// @mixin font-body {
-// 	font-family: helvetica, sans-serif;
-// }
+// -----
+@mixin embedFont($font-name, $font-filepath-and-name, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('../fonts/#{$font-filepath-and-name}.woff2') format('woff2'),
+      url('../fonts/#{$font-filepath-and-name}.woff') format('woff'),
+      url('../fonts/#{$font-filepath-and-name}.otf') format('opentype'); /* IE6-IE8 */
+  }
+}
 
-// @mixin font-head {
-// 	font-family: helvetica, sans-serif;
-// }
+// Fonts
+// --------------------------
+// Do your @font-face embedding here, in the privacy of your own partial
+// `embedFont` must be used once per combination of weight and style (see below)
+
+// @include embedFont('FontName', 'FontName-Regular', $book, normal);
+// @include embedFont('FontName', 'FontName-RegularItalic', $book, italic);
