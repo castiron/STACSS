@@ -30,7 +30,7 @@
 
 // Adapted from https://www.sassmeister.com/gist/7f22e44ace49b5124eec
 // Usage: @include fluid-type(font-size, 22px, 16px, $break130, $break50);
-@mixin fluidScale($properties, $max-size, $min-size, $max-vw, $min-vw) {
+@mixin fluidScale($properties, $max-value, $min-value, $max-vw, $min-vw) {
   @each $property in $properties {
     #{$property}: $max-value;
   }
